@@ -20,6 +20,7 @@ class LocalizationMiddleware
         $locale = Session::get('locale')??'en';
         Session::put('locale', $locale);
         App::setLocale($locale);
+
         return $next($request);
     }
 }
